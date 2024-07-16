@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: customer_start
+    description: ""
+    columns:
+      - name: cif_number
+        tests:
+          - dbt_expectations.expect_column_to_exist
+      - name: acct_no
+        tests:
+          - not_null

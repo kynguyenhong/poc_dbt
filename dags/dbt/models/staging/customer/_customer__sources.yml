@@ -1,0 +1,220 @@
+version: 2
+sources:
+  - name: sliver
+    description: 'This is the source for the sliver database'
+    database: awsdatacatalog
+    schema: non_prod_sit_silver_zone
+    tables:
+      - name: tm_posting__fa
+
+  - name: gold
+    database: awsdatacatalog
+    schema: non_prod_sit_gold_zone
+    tables:
+      - name: deposit_balance
+        identifier: vk_deposit_bal_batch
+        columns:
+          - name: sym_run_date
+            data_type: date
+          - name: branch_no
+            data_type: string
+          - name: client_no
+            data_type: string
+          - name: client_name
+            data_type: string
+          - name: client_type
+            data_type: string
+          - name: acct_no
+            data_type: string
+          - name: acct_type
+            data_type: string
+          - name: acct_type_desc
+            data_type: string
+          - name: loai_tien
+            data_type: string
+          - name: laisuat
+            data_type: string
+          - name: acct_open_date
+            data_type: date
+          - name: acct_first_open_date
+            data_type: date
+          - name: acct_maturity_date
+            data_type: date
+          - name: acct_close_date
+            data_type: date
+          - name: acct_roll_date
+            data_type: date
+          - name: period
+            data_type: bigint
+          - name: period_type
+            data_type: string
+          - name: acct_status
+            data_type: string
+          - name: gl_code
+            data_type: string
+          - name: sodu_nt
+            data_type: bigint
+          - name: sodu_qd
+            data_type: bigint
+          - name: acct_exec
+            data_type: string
+          - name: acct_exec_name
+            data_type: string
+          - name: profit_centre
+            data_type: string
+          - name: gl_code_duchi
+            data_type: string
+          - name: acct_no_duchi
+            data_type: string
+          - name: songay_duchi
+            data_type: bigint
+          - name: duchi_nt
+            data_type: bigint
+          - name: duchi_qd
+            data_type: bigint
+          - name: thuc_chi_nt
+            data_type: bigint
+          - name: thuc_chi_qd
+            data_type: bigint
+          - name: luyke_duchi_nt
+            data_type: bigint
+          - name: dlh_created_time
+            data_type: timestamp
+          - name: dlh_partition_date
+            data_type: date
+          - name: dlh_source
+            data_type: string
+          - name: dlh_processed_time
+            data_type: timestamp
+          - name: year
+            data_type: string
+          - name: month
+            data_type: string
+          - name: day
+            data_type: string
+          - name: acct_open_datetime
+            data_type: timestamp
+          - name: balance_notif
+            data_type: string
+
+      - name: customer
+        database: awsdatacatalog
+        schema: non_prod_sit_gold_zone
+        identifier: d_customer__s4c
+        columns:
+          - name: cif_number
+            data_type: bigint
+          - name: partner_cif
+            data_type: string
+          - name: religion
+            data_type: string
+          - name: registered_date
+            data_type: string
+          - name: first_name_vn
+            data_type: string
+          - name: first_name_en
+            data_type: string
+          - name: full_name_vn
+            data_type: string
+          - name: full_name_en
+            data_type: string
+          - name: sector_code
+            data_type: string
+          - name: lob
+            data_type: string
+          - name: gender
+            data_type: string
+          - name: marital_status
+            data_type: string
+          - name: birth_date
+            data_type: date
+          - name: identity_type
+            data_type: string
+          - name: identity_number
+            data_type: string
+          - name: identity_issued_place
+            data_type: string
+          - name: identity_issued_date
+            data_type: string
+          - name: identity_expired_date
+            data_type: string
+          - name: passport_number
+            data_type: string
+          - name: email
+            data_type: string
+          - name: phone_number
+            data_type: string
+          - name: status
+            data_type: string
+          - name: nationality_code
+            data_type: string
+          - name: first_contact_date
+            data_type: string
+          - name: ex_identity_number
+            data_type: string
+          - name: ex_passport_number
+            data_type: string
+          - name: ex_email
+            data_type: string
+          - name: ex_phone_number
+            data_type: string
+          - name: c_add_country
+            data_type: string
+          - name: c_add_province
+            data_type: string
+          - name: c_add_district
+            data_type: string
+          - name: c_add_ward
+            data_type: string
+          - name: c_add_street
+            data_type: string
+          - name: c_add_detail
+            data_type: string
+          - name: c_add_full
+            data_type: string
+          - name: r_add_country
+            data_type: string
+          - name: r_add_province
+            data_type: string
+          - name: r_add_district
+            data_type: string
+          - name: r_add_ward
+            data_type: string
+          - name: r_add_street
+            data_type: string
+          - name: r_add_detail
+            data_type: string
+          - name: r_add_full
+            data_type: string
+          - name: tax_code
+            data_type: string
+          - name: industry_code
+            data_type: string
+          - name: customer_status
+            data_type: string
+          - name: customer_segment
+            data_type: string
+          - name: priority_class
+            data_type: string
+          - name: occupation
+            data_type: string
+          - name: work_position
+            data_type: string
+          - name: post_code
+            data_type: string
+          - name: payroll_company
+            data_type: string
+          - name: dlh_created_time
+            data_type: timestamp
+          - name: dlh_partition_date
+            data_type: date
+          - name: dlh_source
+            data_type: string
+          - name: dlh_processed_time
+            data_type: timestamp
+          - name: year
+            data_type: string
+          - name: month
+            data_type: string
+          - name: day
+            data_type: string
